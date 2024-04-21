@@ -1,0 +1,37 @@
+
+    <%- include('partials/header.html') %>
+
+   
+
+    <section class="outras-noticias">
+        <div class="title-outras-noticia">
+            <h2>Busca:</h2>
+            <br><br>
+            <div class="center">
+                
+                <div style="width:100%;" class="mais-lidas">
+
+                    <% for(let i = 0; i < postsBusca.length; i++) { %>
+
+                    <h3><%= contagem %> resultados</h3>
+                    <div class="mais-lidas-noticias">
+                        <div class="mais-lida-noticia-single">
+                            <img src="<%= postsBusca[i].imagem %>" />
+                            <div class="texto-mais-lida-single">
+                                <h4><%= postsBusca[i].titulo %></h4>
+                                <p><%- postsBusca[i].conteudo %></p>
+                                <a href="<%= postsBusca[i].slug %>">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('partials/footer.html') %>
+
+</body>
+</html>
